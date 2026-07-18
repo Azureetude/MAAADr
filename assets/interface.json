@@ -54,11 +54,11 @@
     "task": [
         {
             "name": "进入游戏",
-            "entry": "start"
+            "entry": "ADrmian"
         },
         {
             "name": "当期活动",
-            "entry": "MyTask2",
+            "entry": "探索-5-C",
             "option": [
                 "监狱迷宫瓦尔哈拉",
                 "哞特儿牧场"
