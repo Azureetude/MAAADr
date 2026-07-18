@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "filePath": "E:\\Python\\MAAADr\\assets\\resource\\pipeline\\nodes.json",
-            "lastSyncTime": 1784391625355,
+            "lastSyncTime": 1784391629249,
             "coordinateMode": "absolute-v1",
             "isModifiedExternally": false,
             "isDeleted": true,
             "savedViewport": {
-                "x": 761,
-                "y": 377,
-                "zoom": 0.2
+                "x": -1190,
+                "y": 941,
+                "zoom": 0.82
             },
             "filename": "nodes",
             "version": "v1.7.4"
@@ -773,8 +773,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2280,
-                "y": -928
+                "x": 2262,
+                "y": -944
             }
         }
     },
@@ -803,8 +803,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2596,
-                "y": -910
+                "x": 2619,
+                "y": -1189
             }
         }
     },
