@@ -49,7 +49,7 @@
     "task": [
         {
             "name": "进入游戏",
-            "entry": "探索-5-C"
+            "entry": "start"
         },
         {
             "name": "当期活动",
