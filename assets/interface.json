@@ -59,6 +59,14 @@
             "name": "探索-3-D",
             "entry": "探索-3-D"
         },
+      {
+            "name": "吃体力药(小)",
+            "entry": "RestoreStamina-1"
+        },
+      {
+            "name": "吃体力药(大)",
+            "entry": "RestoreStamina-2"
+        },
         {
             "name": "材料兑换",
             "entry": "MyTask3",
