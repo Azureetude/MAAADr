@@ -70,10 +70,6 @@
                 "任务选项1"
             ],
             "pipeline_override": {}
-        },
-        {
-            "name": "带Custom的任务",
-            "entry": "MyTask4"
         }
     ],
     "option": {
