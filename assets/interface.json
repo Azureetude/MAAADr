@@ -49,15 +49,15 @@
     "task": [
         {
             "name": "进入游戏",
-            "entry": "start"
+            "entry": "startgame"
         },
         {
-            "name": "当期活动",
-            "entry": "探索-5-C",
-            "option": [
-                "监狱迷宫瓦尔哈拉",
-                "哞特儿牧场"
-            ]
+            "name": "探索-5-C",
+            "entry": "探索-5-C"
+        },
+      {
+            "name": "探索-3-D",
+            "entry": "探索-3-D"
         },
         {
             "name": "材料兑换",
