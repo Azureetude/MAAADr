@@ -1,0 +1,132 @@
+{
+    "$__mpe_config_exit": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filename": "exit",
+            "prefix": "",
+            "savedViewport": {
+                "x": -1139,
+                "y": 256,
+                "zoom": 1.5
+            },
+            "version": "v1.7.4"
+        }
+    },
+    "新建节点10": {
+        "$__mpe_code": {
+            "position": {
+                "x": 542,
+                "y": -83
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点11"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784361549947.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "新建节点11": {
+        "$__mpe_code": {
+            "position": {
+                "x": 873,
+                "y": -79
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    67,
+                    352,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "新建节点12"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784362214108.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "新建节点12": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1170,
+                "y": -70
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    921,
+                    124,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "新建节点13"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784362304051.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "新建节点13": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1461,
+                "y": -75
+            }
+        },
+        "action": {
+            "param": {
+                "begin": [
+                    604,
+                    576,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        609,
+                        239,
+                        1,
+                        1
+                    ]
+                ]
+            },
+            "type": "Swipe"
+        },
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784362343611.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    }
+}

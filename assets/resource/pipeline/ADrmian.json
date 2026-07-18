@@ -1,0 +1,70 @@
+{
+    "$__mpe_config_ADrmian": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filePath": "E:\\Python\\MAAADr\\assets\\ADr.json",
+            "filename": "ADrmian",
+            "lastSyncTime": 1784346288092,
+            "prefix": "",
+            "savedViewport": {
+                "x": -65,
+                "y": 207,
+                "zoom": 0.86
+            },
+            "version": "v1.7.4"
+        }
+    },
+    "loading": {
+        "$__mpe_code": {
+            "position": {
+                "x": 558,
+                "y": -15
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784360979966.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "start": {
+        "$__mpe_code": {
+            "position": {
+                "x": 301,
+                "y": -42
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "loading"
+        ],
+        "post_delay": 10000,
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784342012088.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "新建节点1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 36,
+                "y": -4
+            }
+        },
+        "next": [
+            "start"
+        ]
+    }
+}

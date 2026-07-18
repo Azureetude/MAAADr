@@ -1,0 +1,89 @@
+{
+    "$__mpe_config_新建Pipeline1": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filename": "新建Pipeline1",
+            "prefix": "",
+            "savedViewport": {
+                "x": 154,
+                "y": 207,
+                "zoom": 0.43
+            },
+            "version": "v1.7.4"
+        }
+    },
+    "新建节点1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 139,
+                "y": 59
+            }
+        },
+        "next": [
+            "进入游戏"
+        ]
+    },
+    "新建节点4": {
+        "$__mpe_code": {
+            "position": {
+                "x": 690,
+                "y": -34
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点5"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784342378935.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "新建节点5": {
+        "$__mpe_code": {
+            "position": {
+                "x": 996,
+                "y": -28
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784342420064.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "进入游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 402,
+                "y": 134
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点4"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "template_1784342012088.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    }
+}
