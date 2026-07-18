@@ -18,11 +18,6 @@
     // "mirrorchyan_multiplatform": true,
     "controller": [
         {
-            "name": "安卓端",
-            "type": "Adb",
-            "display_short_side": 720 // 默认缩放分辨率的短边长度
-        },
-        {
             "name": "桌面端",
             "type": "Win32",
             "win32": {
@@ -34,6 +29,11 @@
                 "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
                 "keyboard": "PostMessageWithCursorPos" // 键盘控制方式
             }
+        },
+        {
+            "name": "安卓端",
+            "type": "Adb",
+            "display_short_side": 720 // 默认缩放分辨率的短边长度
         }
     ],
     "resource": [
@@ -53,27 +53,74 @@
     // },
     "task": [
         {
-            "name": "普通任务",
+            "name": "进入游戏",
             "entry": "MyTask1"
         },
         {
-            "name": "选项任务",
+            "name": "当期活动",
             "entry": "MyTask2",
             "option": [
-                "任务选项1"
+                "监狱迷宫瓦尔哈拉",
+                "哞特儿牧场"
             ]
         },
         {
-            "name": "参数任务",
+            "name": "材料兑换",
             "entry": "MyTask3",
             "option": [
-                "任务选项1"
+                "监狱迷宫瓦尔哈拉",
+                "哞特儿牧场"
+            ],
+            "pipeline_override": {}
+        },
+      {
+            "name": "基础材料",
+            "entry": "MyTask3",
+            "option": [
+                "探索1",
+                "探索2",
+                "探索3",
+                "探索4",
+                "探索5"
+            ],
+            "pipeline_override": {}
+        },
+      {
+            "name": "基础材料",
+            "entry": "探索-5-C",
+            "option": [
+                "探索1",
+                "探索2",
+                "探索3",
+                "探索4",
+                "探索5"
             ],
             "pipeline_override": {}
         }
     ],
     "option": {
         "任务选项1": {
+            "type": "select",
+            "cases": [
+                {
+                    "name": "探索1",
+                    "pipeline_override": {
+                        "OcrTask": {
+                            "text": "探索1"
+                        }
+                    }
+                },
+                {
+                    "name": "探索5",
+                    "pipeline_override": {
+                        "OcrTask": {
+                            "text": "探索5"
+                        }
+                    }
+                }
+            ]
+        },
+      "任务选项2": {
             "type": "select",
             "cases": [
                 {
