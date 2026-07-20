@@ -49,8 +49,21 @@
     "task": [
         {
             "name": "进入游戏",
-            "entry": "startgame"
+            "entry": "startgame",
+            "option": [
+                "是否领取邮件"
+            ]
         },
+        {
+            "name": "刷素材",
+            "entry": "obtainmaterials",
+            "option": [
+                "难度",
+                "关卡",
+                "次数",
+                "是否跳过战斗"
+            ]
+ },
         {
             "name": "探索-5-C",
             "entry": "探索-5-C"
@@ -66,83 +79,118 @@
       {
             "name": "吃体力药(大)",
             "entry": "RestoreStamina-2"
-        },
-        {
-            "name": "材料兑换",
-            "entry": "MyTask3",
-            "option": [
-                "监狱迷宫瓦尔哈拉",
-                "哞特儿牧场"
-            ],
-            "pipeline_override": {}
-        },
-      {
-            "name": "基础材料",
-            "entry": "MyTask3",
-            "option": [
-                "探索1",
-                "探索2",
-                "探索3",
-                "探索4",
-                "探索5"
-            ],
-            "pipeline_override": {}
-        },
-      {
-            "name": "基础材料",
-            "entry": "探索-5-C",
-            "option": [
-                "探索1",
-                "探索2",
-                "探索3",
-                "探索4",
-                "探索5"
-            ],
-            "pipeline_override": {}
         }
     ],
+    "import": [
+        "resource/tasks/StartGame.json",
+        "resource/tasks/Obtainmaterials.json",
+        "resource/tasks/AutoBattle.json"
+    ],
     "option": {
-        "任务选项1": {
+        "是否领取邮件": {
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "entry": "checkhomepage"
+                    }
+                }
+            ]
+        },
+        "难度": {
+            "type": "select",
+            "cases": [
+                {
+                    "name": "探索1"
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                            "expected": "炎之回廊"
+//                        }
+//                    }
+                },
+                {
+                    "name": "探索2"
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                            "expected": "冰之回廊"
+//                        }
+//                    }
+                },
+                {
+                    "name": "探索3"
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                            "expected": "雷之回廊"
+//                        }
+//                    }
+                },
+                {
+                    "name": "探索4"
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                            "expected": "光之回廊"
+//                        }
+//                    }
+                },
+                {
+                    "name": "探索5"
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                           "expected": "暗之回廊"
+//                        }
+//                    }
+                }
+            ]
+        },
+        "关卡": {
             "type": "select",
             "cases": [
                 {
                     "name": "探索1",
                     "pipeline_override": {
-                        "OcrTask": {
-                            "text": "探索1"
+                        "SelectDungeonLevel": {
+                            "expected": "炎之回廊"
+                        }
+                    }
+                },
+                {
+                    "name": "探索2",
+                    "pipeline_override": {
+                        "SelectDungeonLevel": {
+                            "expected": "冰之回廊"
+                        }
+                    }
+                },
+                {
+                    "name": "探索3",
+                    "pipeline_override": {
+                        "SelectDungeonLevel": {
+                            "expected": "雷之回廊"
+                        }
+                    }
+                },
+                {
+                    "name": "探索4",
+                    "pipeline_override": {
+                        "SelectDungeonLevel": {
+                            "expected": "光之回廊"
                         }
                     }
                 },
                 {
                     "name": "探索5",
                     "pipeline_override": {
-                        "OcrTask": {
-                            "text": "探索5"
-                        }
-                    }
-                }
-            ]
-        },
-      "任务选项2": {
-            "type": "select",
-            "cases": [
-                {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
+                        "SelectDungeonLevel": {
+                            "expected": "暗之回廊"
                         }
                     }
                 }
             ]
         }
     }
+    
 }

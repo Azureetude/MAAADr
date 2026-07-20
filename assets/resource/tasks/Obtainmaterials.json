@@ -1,0 +1,291 @@
+{
+    "$__mpe_config_Obtainmaterials": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\tasks\\Obtainmaterials.json",
+            "lastSyncTime": 1784554804013,
+            "isModifiedExternally": false,
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -2757,
+                "y": 918,
+                "zoom": 1.14
+            },
+            "filename": "Obtainmaterials",
+            "version": "v1.7.4"
+        }
+    },
+    "RS-D-3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "template_1784385122119.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点39_副本9"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1718,
+                "y": -528
+            }
+        }
+    },
+    "obtainmaterials": {
+        "next": [
+            "新建节点33_副本5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 262,
+                "y": -510
+            }
+        }
+    },
+    "新建节点33_副本5": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "template_1784342420064.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    256,
+                    644,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "新建节点35_副本6"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 765,
+                "y": -546
+            }
+        }
+    },
+    "新建节点35_副本6": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "template_1784385443385.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    683,
+                    392,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "新建节点37_副本7"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1106,
+                "y": -571
+            }
+        }
+    },
+    "新建节点37_副本7": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    981,
+                    598,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        983,
+                        346,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "post_wait_freezes": 5000,
+        "next": [
+            "RS-D-3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1416,
+                "y": -530
+            }
+        }
+    },
+    "新建节点39_副本9": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "template_1784385162296.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    522,
+                    628,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "新建节点40_副本10"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2029,
+                "y": -529
+            }
+        }
+    },
+    "新建节点40_副本10": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "template_1784385268554.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    813,
+                    228,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "新建节点41_副本11"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2337,
+                "y": -533
+            }
+        }
+    },
+    "新建节点41_副本11": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "template_1784385298173.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    808,
+                    533,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "新建节点42_副本12"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2686,
+                "y": -553
+            }
+        }
+    },
+    "新建节点42_副本12": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "template_1784385345702.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    635,
+                    374,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "新建节点44_副本13"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3013,
+                "y": -493
+            }
+        }
+    },
+    "新建节点44_副本13": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "template_1784381769316.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    135,
+                    48,
+                    1,
+                    1
+                ]
+            }
+        },
+        "timeout": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 3332,
+                "y": -534
+            }
+        }
+    }
+}

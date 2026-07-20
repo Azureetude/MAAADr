@@ -1,0 +1,149 @@
+{
+    "$__mpe_config_StartGame": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\tasks\\StartGame.json",
+            "lastSyncTime": 1784552608585,
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": 2710,
+                "y": 1389,
+                "zoom": 1.14
+            },
+            "filename": "StartGame",
+            "version": "v1.7.4"
+        }
+    },
+    "startgame": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/TtS.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 100000,
+        "next": [
+            "checkhomepage"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -2386,
+                "y": -1014
+            }
+        }
+    },
+    "checkhomepage": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    16,
+                    113,
+                    108,
+                    278
+                ],
+                "template": [
+                    "basic/homepage.png"
+                ]
+            }
+        },
+        "next": [
+            "mail"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -2033,
+                "y": -1011
+            }
+        }
+    },
+    "mail": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    15,
+                    189,
+                    98,
+                    70
+                ],
+                "template": [
+                    "basic/mail.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "receive"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1664,
+                "y": -1005
+            }
+        }
+    },
+    "receive": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1127,
+                    657,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "backhomepage"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1338,
+                "y": -989
+            }
+        }
+    },
+    "backhomepage": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    91,
+                    3,
+                    86,
+                    85
+                ],
+                "template": [
+                    "basic/backhome.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    128,
+                    45,
+                    1,
+                    1
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -994,
+                "y": -1015
+            }
+        }
+    }
+}
