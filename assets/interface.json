@@ -46,6 +46,7 @@
     //         "./agent/main.py"
     //     ]
     // },
+    "import": [],
     "task": [
         {
             "name": "进入游戏",
@@ -81,11 +82,6 @@
             "entry": "RestoreStamina-2"
         }
     ],
-    "import": [
-        "resource/tasks/StartGame.json",
-        "resource/tasks/Obtainmaterials.json",
-        "resource/tasks/AutoBattle.json"
-    ],
     "option": {
         "是否领取邮件": {
             "type": "switch",
@@ -94,10 +90,10 @@
                     "name": "Yes"
                 },
                 {
-                    "name": "No",
-                    "pipeline_override": {
-                        "entry": "checkhomepage"
-                    }
+                    "name": "No"
+//                    "pipeline_override": {
+//                        "entry": "checkhomepage"
+//                    }
                 }
             ]
         },
@@ -150,7 +146,7 @@
             "type": "select",
             "cases": [
                 {
-                    "name": "探索1",
+                    "name": "RS-L-1",
                     "pipeline_override": {
                         "SelectDungeonLevel": {
                             "expected": "炎之回廊"
@@ -158,7 +154,7 @@
                     }
                 },
                 {
-                    "name": "探索2",
+                    "name": "RS-K-1",
                     "pipeline_override": {
                         "SelectDungeonLevel": {
                             "expected": "冰之回廊"
@@ -166,7 +162,7 @@
                     }
                 },
                 {
-                    "name": "探索3",
+                    "name": "RS-J-1",
                     "pipeline_override": {
                         "SelectDungeonLevel": {
                             "expected": "雷之回廊"
@@ -174,7 +170,7 @@
                     }
                 },
                 {
-                    "name": "探索4",
+                    "name": "RS-I-1",
                     "pipeline_override": {
                         "SelectDungeonLevel": {
                             "expected": "光之回廊"
@@ -182,7 +178,7 @@
                     }
                 },
                 {
-                    "name": "探索5",
+                    "name": "RS-H-1",
                     "pipeline_override": {
                         "SelectDungeonLevel": {
                             "expected": "暗之回廊"

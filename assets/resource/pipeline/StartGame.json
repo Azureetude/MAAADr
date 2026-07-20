@@ -3,12 +3,12 @@
         "$__mpe_code": {
             "prefix": "",
             "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\tasks\\StartGame.json",
-            "lastSyncTime": 1784552608585,
+            "lastSyncTime": 1784558022962,
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 2710,
-                "y": 1389,
-                "zoom": 1.14
+                "x": 2647,
+                "y": 1020,
+                "zoom": 1
             },
             "filename": "StartGame",
             "version": "v1.7.4"
@@ -18,13 +18,27 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
+                "roi": [
+                    176,
+                    17,
+                    978,
+                    511
+                ],
                 "template": [
-                    "basic/TtS.png"
+                    "basic/logo.png"
                 ]
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target": [
+                    634,
+                    548,
+                    1,
+                    1
+                ]
+            }
         },
         "post_wait_freezes": 100000,
         "next": [
