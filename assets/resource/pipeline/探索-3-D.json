@@ -1,0 +1,7 @@
+    "探索-3-D": {
+        "desc": "探索-3-D",
+        "next": [
+            "8bitFlagInMain",
+            "[JumpBack]8bitEntry"
+        ]
+    },

@@ -1,0 +1,229 @@
+{
+    "task": [
+        {
+            "name": "刷取素材",
+            "entry": "探索-3-D",
+            "option": [
+                "材料种类",
+                "材料名称",
+                "稀有度",
+                "数量",
+                "吃药"
+            ],
+            "group": [
+                "daily"
+            ]
+        }
+    ],
+    "option": {
+        "材料种类": {
+            "type": "select",
+            "label": "材料种类",
+            "cases": [
+                {
+                    "name": "经验书",
+                    "description": "经验",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "经验书"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "技能书",
+                    "description": "技能",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "技能书"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "素材",
+                    "description": "素材",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "素材"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "材料名称": {
+            "type": "select",
+            "label": "材料名称",
+            "cases": [
+                {
+                    "name": "枝条",
+                    "description": "枝条",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "枝条"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "爪子",
+                    "description": "爪子",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "爪子"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "药瓶",
+                    "description": "药瓶",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "药瓶"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "稀有度": {
+            "type": "select",
+            "label": "稀有度",
+            "cases": [
+                {
+                    "name": "绿色",
+                    "description": "绿色",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "绿色"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "蓝色",
+                    "description": "蓝色",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "蓝色"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "紫色",
+                    "description": "紫色",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "valid_period": "紫色"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "吃体力药": {
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "option": [
+                        "吃药种类",
+                        "自定义吃药次数",
+                        "连续吃药"
+                    ]
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "EatCandy": {
+                            "enabled": false
+                        },
+                        "EatMiniCandy": {
+                            "enabled": false
+                        },
+                        "EatCandyStart": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ],
+            "description": "是否吃药"
+        },
+        "自定义吃药次数": {
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "max_hit": 114514
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "option": [
+                        "吃药次数"
+                    ]
+                }
+            ],
+            "description": "关闭时，吃所有符合要求的药"
+        },
+        "吃药次数": {
+            "type": "input",
+            "label": "吃药次数",
+            "inputs": [
+                {
+                    "name": "吃药次数",
+                    "pipeline_type": "int",
+                    "default": "114514",
+                    "verify": "^(0|[1-9]\\d*)$"
+                }
+            ],
+            "pipeline_override": {
+                "EatCandyStart": {
+                    "max_hit": "{吃药次数}"
+                }
+            },
+            "description": " "
+        },
+        "连续吃药": {
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "fast": 1
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "EatCandyStart": {
+                            "attach": {
+                                "fast": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "description": "开启后，每次进入吃药界面尽可能多吃药；关闭后，每次进入吃药界面只吃一次药"
+        }
+    }
+}
