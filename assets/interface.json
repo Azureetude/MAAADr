@@ -1,0 +1,148 @@
+{
+    // 本文件主要定义了通用 UI 的行为和显示内容
+    // 可参考文档和示例添加更多您需要的功能
+    // 文档：https://maafw.xyz/docs/3.3-ProjectInterfaceV2
+    // 示例：https://github.com/MaaXYZ/MaaFramework/blob/main/sample/interface.json
+    "interface_version": 2,
+    "name": "MaaADr",
+    "description": "这是一个使用 MaaFramework 创建的新项目。",
+    "contact": "QQ群: 1071729734",
+    "license": "MIT",
+    "welcome": "首次使用！欢迎使用 MaaADr!",
+    // 填写项目地址和版本号可实现自动更新功能
+    // "github": "https://github.com/Azureetude/MAAADr",
+    // "version": "0.0.0.1",
+    // Mirror酱为第三方分发服务，新项目默认关闭
+    // 若有需要请联系 Mirror酱 开通，直接自行开启是无法使用的
+    // "mirrorchyan_rid": "MaaXXX",
+    // "mirrorchyan_multiplatform": true,
+    "controller": [
+        {
+            "name": "桌面端",
+            "type": "Win32",
+            "win32": {
+                "class_regex": ".*",
+                "window_regex": "Anados",
+                // 截图及控制方式，请根据项目实际情况修改
+                // 文档: https://maafw.xyz/docs/2.4-ControlMethods
+                "screencap": "PrintWindow", // 截图方式
+                "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
+                "keyboard": "PostMessageWithCursorPos" // 键盘控制方式
+            }
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "./resource"
+            ]
+        }
+    ],
+    // 可选的 agent 示例
+    // "agent": {
+    //     "child_exec": "python",
+    //     "child_args": [
+    //         "./agent/main.py"
+    //     ]
+    // },
+    "task": [
+        {
+            "name": "进入游戏",
+            "entry": "startgame"
+        },
+        {
+            "name": "探索-5-C",
+            "entry": "探索-5-C"
+        },
+      {
+            "name": "探索-3-D",
+            "entry": "探索-3-D"
+        },
+      {
+            "name": "吃体力药(小)",
+            "entry": "RestoreStamina-1"
+        },
+      {
+            "name": "吃体力药(大)",
+            "entry": "RestoreStamina-2"
+        },
+        {
+            "name": "材料兑换",
+            "entry": "MyTask3",
+            "option": [
+                "监狱迷宫瓦尔哈拉",
+                "哞特儿牧场"
+            ],
+            "pipeline_override": {}
+        },
+      {
+            "name": "基础材料",
+            "entry": "MyTask3",
+            "option": [
+                "探索1",
+                "探索2",
+                "探索3",
+                "探索4",
+                "探索5"
+            ],
+            "pipeline_override": {}
+        },
+      {
+            "name": "基础材料",
+            "entry": "探索-5-C",
+            "option": [
+                "探索1",
+                "探索2",
+                "探索3",
+                "探索4",
+                "探索5"
+            ],
+            "pipeline_override": {}
+        }
+    ],
+    "option": {
+        "任务选项1": {
+            "type": "select",
+            "cases": [
+                {
+                    "name": "探索1",
+                    "pipeline_override": {
+                        "OcrTask": {
+                            "text": "探索1"
+                        }
+                    }
+                },
+                {
+                    "name": "探索5",
+                    "pipeline_override": {
+                        "OcrTask": {
+                            "text": "探索5"
+                        }
+                    }
+                }
+            ]
+        },
+      "任务选项2": {
+            "type": "select",
+            "cases": [
+                {
+                    "name": "文本1",
+                    "pipeline_override": {
+                        "OcrTask": {
+                            "text": "文本1"
+                        }
+                    }
+                },
+                {
+                    "name": "文本2",
+                    "pipeline_override": {
+                        "OcrTask": {
+                            "text": "文本2"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
