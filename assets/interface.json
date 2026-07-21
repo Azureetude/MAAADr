@@ -85,6 +85,10 @@
                 "次数",
                 "是否跳过战斗"
             ]
+        },
+        {
+            "name": "退出游戏",
+            "entry": "endgame"
         }
     ],
     "option": {
@@ -181,13 +185,13 @@
                 {
                     "name": "监狱迷宫瓦尔拉哈",
                     "option": [  // 嵌套的子选项  
-                       "关卡"
-                   ] 
-//                    "pipeline_override": {
-//                        "SelectDungeonLevel": {
-//                            "expected": "炎之回廊"
-//                        }
-//                    }
+                       "JV_33"
+                   ], 
+                    "pipeline_override": {
+                        "findmap": {  
+                            "next": "find_JV"  // 控制跳转到对应活动地图  
+                        }    
+                    }
                 },
                 {
                     "name": "哞特儿牧场",
@@ -196,35 +200,23 @@
                    ], 
                     "pipeline_override": {
                         "findmap": {  
-                            "next": "find_MR"  // 控制跳转到返回主界面节点  
-                     }    
+                            "next": "find_MR"  // 控制跳转到对应活动地图  
+                        }    
                     }
-                },
-                {
-                    "name": "探索3"
-//                    "pipeline_override": {
-//                        "SelectDungeonLevel": {
-//                            "expected": "雷之回廊"
-//                        }
-//                    }
-                },
-                {
-                    "name": "探索4"
-//                    "pipeline_override": {
-//                        "SelectDungeonLevel": {
-//                            "expected": "光之回廊"
-//                        }
-//                    }
-                },
-                {
-                    "name": "探索5"
-//                    "pipeline_override": {
-//                        "SelectDungeonLevel": {
-//                           "expected": "暗之回廊"
-//                        }
-//                    }
                 }
             ]
+        },
+        "MR_37": {  
+            "type": "select",  
+            "cases": [  
+            { "name": "MR_37" }  
+             ]  
+        },
+        "JV_33": {  
+            "type": "select",  
+            "cases": [  
+            { "name": "JV_33" }  
+             ]  
         },
         "关卡": {
             "type": "select",

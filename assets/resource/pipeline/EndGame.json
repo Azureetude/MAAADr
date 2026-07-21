@@ -1,0 +1,154 @@
+{
+    "$__mpe_config_EndGame": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filename": "EndGame",
+            "prefix": "",
+            "savedViewport": {
+                "x": -801,
+                "y": 756,
+                "zoom": 0.65
+            },
+            "version": "v1.7.4"
+        }
+    },
+    "closegame_1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3096,
+                "y": -534
+            }
+        },
+        "action": {
+            "param": {
+                "begin": [
+                    803,
+                    550,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        821,
+                        266,
+                        1,
+                        1
+                    ]
+                ]
+            },
+            "type": "Swipe"
+        },
+        "next": [
+            "closegame_2"
+        ]
+    },
+    "closegame_2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3425,
+                "y": -523
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    797,
+                    640,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "template": [
+                    "basic/closegame.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "endgame": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2170,
+                "y": -574
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    133,
+                    42,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "setting"
+        ]
+    },
+    "setting": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2479,
+                "y": -580
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    63,
+                    353,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "support"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "basic/homepage.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "support": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2804,
+                "y": -552
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    894,
+                    120,
+                    1,
+                    1
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "closegame_1"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "basic/setting.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    }
+}

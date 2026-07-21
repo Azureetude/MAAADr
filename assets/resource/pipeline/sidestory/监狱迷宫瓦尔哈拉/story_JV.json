@@ -1,25 +1,26 @@
 {
-    "$__mpe_config_story": {
+    "$__mpe_config_story_JV": {
         "$__mpe_code": {
             "prefix": "",
-            "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\image\\sidestory\\MR\\story.json",
-            "lastSyncTime": 1784639416882,
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784647097329,
+            "isModifiedExternally": false,
+            "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\pipeline\\sidestory\\监狱迷宫瓦尔哈拉\\story_JV.json",
             "savedViewport": {
-                "x": -1227,
-                "y": 726,
-                "zoom": 0.86
+                "x": -4927,
+                "y": 929,
+                "zoom": 1.5
             },
-            "filename": "story",
+            "filename": "story_JV",
             "version": "v1.7.4"
         }
     },
-    "find_MR": {
+    "JV_6": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "sidestory/MR/banner_home.png"
+                    "sidestory/JV/JV_6.png"
                 ]
             }
         },
@@ -27,24 +28,24 @@
             "type": "Click",
             "param": {
                 "target": [
-                    1091,
-                    400,
+                    1067,
+                    362,
                     1,
                     1
                 ]
             }
         },
         "next": [
-            "MR_4"
+            "JV_6_33_1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 479,
-                "y": -629
+                "x": 807,
+                "y": -309
             }
         }
     },
-    "MR_4_37_1": {
+    "JV_6_33_1": {
         "action": {
             "type": "Swipe",
             "param": {
@@ -66,7 +67,7 @@
         },
         "repeat": 3,
         "next": [
-            "MR_4_37_2"
+            "JV_6_33_2"
         ],
         "$__mpe_code": {
             "position": {
@@ -75,12 +76,12 @@
             }
         }
     },
-    "MR_4": {
+    "JV_6_33_2": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "sidestory/MR/MR_4.png"
+                    "sidestory/JV/JV_33.png"
                 ]
             }
         },
@@ -88,45 +89,16 @@
             "type": "Click",
             "param": {
                 "target": [
-                    831,
-                    569,
+                    1013,
+                    345,
                     1,
                     1
                 ]
             }
         },
+        "post_delay": 1000,
         "next": [
-            "MR_4_37_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 807,
-                "y": -309
-            }
-        }
-    },
-    "MR_4_37_2": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "sidestory/MR/MR_37.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    977,
-                    350,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": [
-            "MR_SKIP_1"
+            "JV_SKIP_1"
         ],
         "$__mpe_code": {
             "position": {
@@ -135,7 +107,7 @@
             }
         }
     },
-    "MR_SKIP_1": {
+    "JV_SKIP_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -156,7 +128,7 @@
             }
         },
         "next": [
-            "MR_SKIP_2"
+            "JV_SKIP_2"
         ],
         "$__mpe_code": {
             "position": {
@@ -165,7 +137,7 @@
             }
         }
     },
-    "MR_SKIP_2": {
+    "JV_SKIP_2": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -186,7 +158,7 @@
             }
         },
         "next": [
-            "MR_SKIP_3"
+            "JV_SKIP_3"
         ],
         "$__mpe_code": {
             "position": {
@@ -195,7 +167,7 @@
             }
         }
     },
-    "MR_SKIP_3": {
+    "JV_SKIP_3": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -217,7 +189,7 @@
         },
         "post_wait_freezes": 500,
         "next": [
-            "MR_SKIP_4"
+            "JV_SKIP_4"
         ],
         "$__mpe_code": {
             "position": {
@@ -226,12 +198,12 @@
             }
         }
     },
-    "MR_SKIP_4": {
+    "JV_SKIP_4": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "sidestory/MR/SKIP_MR_37.png"
+                    "basic/Result.png"
                 ],
                 "green_mask": true
             }
@@ -239,10 +211,70 @@
         "action": {
             "type": "Click"
         },
+        "next": [
+            "JV_BACK_HOME"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": 3316,
                 "y": -476
+            }
+        }
+    },
+    "find_JV": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "sidestory/JV/JV_BANNER.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1106,
+                    283,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "JV_6"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 479,
+                "y": -629
+            }
+        }
+    },
+    "JV_BACK_HOME": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/backhome.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    137,
+                    45,
+                    1,
+                    1
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3699,
+                "y": -459
             }
         }
     }
