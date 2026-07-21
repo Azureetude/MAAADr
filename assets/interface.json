@@ -44,6 +44,10 @@
     //         "./agent/main.py"
     //     ]
     // },
+     "import": [
+        "tasks/startgame.json",
+        "tasks/endgame.json"
+    ],
     "task": [
 //        {
 //            "name": "进入游戏",
@@ -188,9 +192,5 @@
                 }
             ]
         }
-    },
-    "import": [
-        "tasks/startgame.json",
-        "tasks/endgame.json"
-    ]
+    }
 }

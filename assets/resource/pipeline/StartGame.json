@@ -2,30 +2,31 @@
     "$__mpe_config_StartGame": {
         "$__mpe_code": {
             "prefix": "",
-            "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\tasks\\StartGame.json",
-            "lastSyncTime": 1784558022962,
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784600708274,
+            "isModifiedExternally": false,
+            "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\pipeline\\StartGame.json",
             "savedViewport": {
-                "x": 2647,
-                "y": 1020,
-                "zoom": 1
+                "x": 3582,
+                "y": 1738,
+                "zoom": 1.5
             },
             "filename": "StartGame",
             "version": "v1.7.4"
         }
     },
-    "startgame": {
+    "backhomepage": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    176,
-                    17,
-                    978,
-                    511
+                    91,
+                    3,
+                    86,
+                    85
                 ],
                 "template": [
-                    "basic/logo.png"
+                    "basic/backhome.png"
                 ]
             }
         },
@@ -33,21 +34,17 @@
             "type": "Click",
             "param": {
                 "target": [
-                    634,
-                    548,
+                    128,
+                    45,
                     1,
                     1
                 ]
             }
         },
-        "post_wait_freezes": 100000,
-        "next": [
-            "checkhomepage"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": -2386,
-                "y": -1014
+                "x": -994,
+                "y": -1015
             }
         }
     },
@@ -71,8 +68,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -2033,
-                "y": -1011
+                "x": -2005,
+                "y": -1109
             }
         }
     },
@@ -127,18 +124,18 @@
             }
         }
     },
-    "backhomepage": {
+    "startgame": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    91,
-                    3,
-                    86,
-                    85
+                    176,
+                    17,
+                    978,
+                    511
                 ],
                 "template": [
-                    "basic/backhome.png"
+                    "basic/logo.png"
                 ]
             }
         },
@@ -146,17 +143,74 @@
             "type": "Click",
             "param": {
                 "target": [
-                    128,
-                    45,
+                    634,
+                    548,
                     1,
                     1
                 ]
             }
         },
+        "post_wait_freezes": 100000,
+        "next": [
+            "checkdaily"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": -994,
-                "y": -1015
+                "x": -2996,
+                "y": -1136
+            }
+        }
+    },
+    "checkdaily": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/daily.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "dailyreward"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -2641,
+                "y": -1095
+            }
+        }
+    },
+    "dailyreward": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/dailyreward.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    654,
+                    600,
+                    1,
+                    1
+                ]
+            }
+        },
+        "repeat": 2,
+        "next": [
+            "checkhomepage"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -2301,
+                "y": -1109
             }
         }
     }
