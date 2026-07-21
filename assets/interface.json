@@ -23,8 +23,6 @@
             "win32": {
                 "class_regex": ".*",
                 "window_regex": "Anados",
-                // 截图及控制方式，请根据项目实际情况修改
-                // 文档: https://maafw.xyz/docs/2.4-ControlMethods
                 "screencap": "PrintWindow", // 截图方式
                 "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
                 "keyboard": "PostMessageWithCursorPos" // 键盘控制方式
@@ -46,15 +44,14 @@
     //         "./agent/main.py"
     //     ]
     // },
-    "import": [],
     "task": [
-        {
-            "name": "进入游戏",
-            "entry": "startgame",
-            "option": [
-                "是否领取邮件"
-            ]
-        },
+//        {
+//            "name": "进入游戏",
+//            "entry": "startgame",
+//            "option": [
+//                "是否领取邮件"
+//            ]
+//        },
         {
             "name": "刷素材",
             "entry": "obtainmaterials",
@@ -64,23 +61,27 @@
                 "次数",
                 "是否跳过战斗"
             ]
- },
+        },
         {
-            "name": "探索-5-C",
-            "entry": "探索-5-C"
+            "name": "当期活动",
+            "entry": "obtainmaterials",
+            "option": [
+                "章节",
+                "关卡",
+                "次数",
+                "是否跳过战斗"
+            ]
         },
-      {
-            "name": "探索-3-D",
-            "entry": "探索-3-D"
+        {
+            "name": "主线故事",
+            "entry": "obtainmaterials",
+            "option": [
+                "章节",
+                "关卡",
+                "次数",
+                "是否跳过战斗"
+            ]
         },
-      {
-            "name": "吃体力药(小)",
-            "entry": "RestoreStamina-1"
-        },
-      {
-            "name": "吃体力药(大)",
-            "entry": "RestoreStamina-2"
-        }
     ],
     "option": {
         "是否领取邮件": {
@@ -187,6 +188,9 @@
                 }
             ]
         }
-    }
-    
+    },
+    "import": [
+        "tasks/startgame.json",
+        "tasks/endgame.json"
+    ]
 }

@@ -1,0 +1,27 @@
+{
+    "task": [
+        {
+            "name": "进入游戏",
+            "entry": "startgame",
+            "option": [
+                "是否领取邮件"
+            ]
+        }
+    ],
+    "option": {
+        "是否领取邮件": {
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "Yes"
+                },
+                {
+                    "name": "No"
+//                    "pipeline_override": {
+//                        "entry": "checkhomepage"
+//                    }
+                }
+            ]
+        }
+    }
+}
