@@ -92,7 +92,12 @@
             "type": "switch",
             "cases": [
                 {
-                    "name": "Yes"
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "startgame": {  
+                            "next": "checkdaily"  // 控制跳转到返回主界面节点  
+                     }    
+                    }
                 },
                 {
                     "name": "No",
