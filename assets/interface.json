@@ -68,11 +68,11 @@
         },
         {
             "name": "当期活动",
-            "entry": "obtainmaterials",
+            "entry": "findmap",
             "option": [
-                "章节",
+                "活动",
                 "关卡",
-                "次数",
+//                "次数",
                 "是否跳过战斗"
             ]
         },
@@ -109,6 +109,27 @@
                 }
             ]
         },
+        "是否跳过战斗": {
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "Yes"
+//                    "pipeline_override": {
+//                        "startgame": {  
+//                            "next": "checkdaily"  // 控制跳转到返回主界面节点  
+//                     }    
+//                    }
+                },
+                {
+                    "name": "No",
+//                    "pipeline_override": {
+//                        "startgame": {  
+//                            "next": "checkdaily_nomail"  // 控制跳转到返回主界面节点  
+//                     }    
+//                    }
+                }
+            ]
+        },
         "难度": {
             "type": "select",
             "cases": [
@@ -127,6 +148,57 @@
 //                            "expected": "冰之回廊"
 //                        }
 //                    }
+                },
+                {
+                    "name": "探索3"
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                            "expected": "雷之回廊"
+//                        }
+//                    }
+                },
+                {
+                    "name": "探索4"
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                            "expected": "光之回廊"
+//                        }
+//                    }
+                },
+                {
+                    "name": "探索5"
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                           "expected": "暗之回廊"
+//                        }
+//                    }
+                }
+            ]
+        },
+        "活动": {
+            "type": "select",
+            "cases": [
+                {
+                    "name": "监狱迷宫瓦尔拉哈",
+                    "option": [  // 嵌套的子选项  
+                       "关卡"
+                   ] 
+//                    "pipeline_override": {
+//                        "SelectDungeonLevel": {
+//                            "expected": "炎之回廊"
+//                        }
+//                    }
+                },
+                {
+                    "name": "哞特儿牧场",
+                    "option": [  // 嵌套的子选项  
+                       "MR_37"
+                   ], 
+                    "pipeline_override": {
+                        "findmap": {  
+                            "next": "find_MR"  // 控制跳转到返回主界面节点  
+                     }    
+                    }
                 },
                 {
                     "name": "探索3"

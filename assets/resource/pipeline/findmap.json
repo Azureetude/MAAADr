@@ -1,0 +1,23 @@
+{
+    "$__mpe_config_findmap": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filename": "findmap",
+            "prefix": "",
+            "savedViewport": {
+                "x": -402,
+                "y": 593,
+                "zoom": 0.86
+            },
+            "version": "v1.7.4"
+        }
+    },
+    "findmap": {
+        "$__mpe_code": {
+            "position": {
+                "x": 881,
+                "y": -376
+            }
+        }
+    }
+}

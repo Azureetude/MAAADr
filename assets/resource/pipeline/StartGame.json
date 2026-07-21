@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784622238522,
+            "lastSyncTime": 1784637608317,
             "isModifiedExternally": false,
             "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\pipeline\\StartGame.json",
             "savedViewport": {
-                "x": 1892,
-                "y": 971,
-                "zoom": 0.65
+                "x": 2115,
+                "y": 954,
+                "zoom": 0.76
             },
             "filename": "StartGame",
             "version": "v1.7.4"
@@ -49,49 +49,43 @@
         }
     },
     "checkdaily": {
-        "recognition": {
-            "type": "TemplateMatch",
+        "action": {
+            "type": "Click",
             "param": {
-                "template": [
-                    "basic/daily.png"
+                "target": [
+                    615,
+                    364,
+                    2,
+                    0
                 ]
             }
         },
-        "action": {
-            "type": "Click"
-        },
-        "timeout": 5000,
+        "post_wait_freezes": 1000,
         "next": [
             "dailyreward"
         ],
-        "on_error": [
-            "checkhomepage"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": -2641,
-                "y": -1095
+                "x": -2648,
+                "y": -1055
             }
         }
     },
     "checkdaily_nomail": {
-        "recognition": {
-            "type": "TemplateMatch",
+        "action": {
+            "type": "Click",
             "param": {
-                "template": [
-                    "basic/daily.png"
+                "target": [
+                    631,
+                    335,
+                    1,
+                    1
                 ]
             }
         },
-        "action": {
-            "type": "Click"
-        },
-        "timeout": 5000,
+        "post_wait_freezes": 1000,
         "next": [
             "dailyreward_nomail"
-        ],
-        "on_error": [
-            "checkhomepage_mail"
         ],
         "$__mpe_code": {
             "position": {
@@ -119,7 +113,7 @@
             }
         }
     },
-    "checkhomepage_mail": {
+    "checkhomepage_nomail": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -130,20 +124,12 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": -1984,
-                "y": -800
+                "x": -1964,
+                "y": -739
             }
         }
     },
     "dailyreward": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "basic/dailyreward.png"
-                ]
-            }
-        },
         "action": {
             "type": "Click",
             "param": {
@@ -156,25 +142,18 @@
             }
         },
         "repeat": 2,
+        "post_wait_freezes": 1000,
         "next": [
             "checkhomepage"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -2310,
-                "y": -1358
+                "x": -2311,
+                "y": -1088
             }
         }
     },
     "dailyreward_nomail": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "basic/dailyreward.png"
-                ]
-            }
-        },
         "action": {
             "type": "Click",
             "param": {
@@ -187,13 +166,14 @@
             }
         },
         "repeat": 2,
+        "post_wait_freezes": 1000,
         "next": [
-            "checkhomepage_mail"
+            "checkhomepage_nomail"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -2311,
-                "y": -510
+                "x": -2296,
+                "y": -761
             }
         }
     },
@@ -238,6 +218,7 @@
                 ]
             }
         },
+        "post_wait_freezes": 500,
         "next": [
             "backhomepage"
         ],

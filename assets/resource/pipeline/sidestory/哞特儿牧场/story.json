@@ -1,0 +1,249 @@
+{
+    "$__mpe_config_story": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\image\\sidestory\\MR\\story.json",
+            "lastSyncTime": 1784639416882,
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -1227,
+                "y": 726,
+                "zoom": 0.86
+            },
+            "filename": "story",
+            "version": "v1.7.4"
+        }
+    },
+    "find_MR": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "sidestory/MR/banner_home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1091,
+                    400,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "MR_4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 479,
+                "y": -629
+            }
+        }
+    },
+    "MR_4_37_1": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    947,
+                    258,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        941,
+                        588,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "repeat": 3,
+        "next": [
+            "MR_4_37_2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1197,
+                "y": -71
+            }
+        }
+    },
+    "MR_4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "sidestory/MR/MR_4.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    831,
+                    569,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "MR_4_37_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 807,
+                "y": -309
+            }
+        }
+    },
+    "MR_4_37_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "sidestory/MR/MR_37.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    977,
+                    350,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "MR_SKIP_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1511,
+                "y": -66
+            }
+        }
+    },
+    "MR_SKIP_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/SKIP_START.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    511,
+                    634,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "MR_SKIP_2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2215,
+                "y": -505
+            }
+        }
+    },
+    "MR_SKIP_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/SKIP_NUMBER.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    812,
+                    228,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "MR_SKIP_3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2557,
+                "y": -497
+            }
+        }
+    },
+    "MR_SKIP_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/SKIP_OK.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    795,
+                    538,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "MR_SKIP_4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2917,
+                "y": -484
+            }
+        }
+    },
+    "MR_SKIP_4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "sidestory/MR/SKIP_MR_37.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3316,
+                "y": -476
+            }
+        }
+    }
+}
