@@ -45,17 +45,17 @@
     //     ]
     // },
      "import": [
-        "tasks/startgame.json",
-        "tasks/endgame.json"
+//        "tasks/startgame.json",
+//        "tasks/endgame.json"
     ],
     "task": [
-//        {
-//            "name": "进入游戏",
-//            "entry": "startgame",
-//            "option": [
-//                "是否领取邮件"
-//            ]
-//        },
+        {
+            "name": "进入游戏",
+            "entry": "startgame",
+            "option": [
+                "是否领取邮件"
+            ]
+        },
         {
             "name": "刷素材",
             "entry": "obtainmaterials",
@@ -85,7 +85,7 @@
                 "次数",
                 "是否跳过战斗"
             ]
-        },
+        }
     ],
     "option": {
         "是否领取邮件": {
@@ -95,10 +95,12 @@
                     "name": "Yes"
                 },
                 {
-                    "name": "No"
-//                    "pipeline_override": {
-//                        "entry": "checkhomepage"
-//                    }
+                    "name": "No",
+                    "pipeline_override": {
+                        "startgame": {  
+                            "next": "checkdaily_nomail"  // 控制跳转到返回主界面节点  
+                     }    
+                    }
                 }
             ]
         },

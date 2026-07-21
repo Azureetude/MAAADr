@@ -3,16 +3,95 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784600708274,
+            "lastSyncTime": 1784618621423,
             "isModifiedExternally": false,
             "filePath": "E:\\VSCode\\MAAADr\\assets\\resource\\pipeline\\StartGame.json",
             "savedViewport": {
-                "x": 3582,
-                "y": 1738,
-                "zoom": 1.5
+                "x": 1218,
+                "y": 474,
+                "zoom": 0.33
             },
             "filename": "StartGame",
             "version": "v1.7.4"
+        }
+    },
+    "checkhomepage_mail": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    16,
+                    113,
+                    108,
+                    278
+                ],
+                "template": [
+                    "basic/homepage.png"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -1984,
+                "y": -800
+            }
+        }
+    },
+    "checkdaily_nomail": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/daily.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 20000,
+        "next": [
+            "dailyreward_nomail"
+        ],
+        "on_error": [
+            "checkhomepage_mail"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -2647,
+                "y": -732
+            }
+        }
+    },
+    "dailyreward_nomail": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "basic/dailyreward.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    654,
+                    600,
+                    1,
+                    1
+                ]
+            }
+        },
+        "repeat": 2,
+        "next": [
+            "checkhomepage_mail"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -2305,
+                "y": -547
+            }
         }
     },
     "backhomepage": {
@@ -68,8 +147,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -2005,
-                "y": -1109
+                "x": -1973,
+                "y": -1108
             }
         }
     },
@@ -98,7 +177,7 @@
         "$__mpe_code": {
             "position": {
                 "x": -1664,
-                "y": -1005
+                "y": -1037
             }
         }
     },
@@ -150,7 +229,7 @@
                 ]
             }
         },
-        "post_wait_freezes": 100000,
+        "post_wait_freezes": 200000,
         "next": [
             "checkdaily"
         ],
@@ -173,8 +252,12 @@
         "action": {
             "type": "Click"
         },
+        "timeout": 20000,
         "next": [
             "dailyreward"
+        ],
+        "on_error": [
+            "checkhomepage"
         ],
         "$__mpe_code": {
             "position": {
@@ -209,8 +292,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -2301,
-                "y": -1109
+                "x": -2310,
+                "y": -1358
             }
         }
     }
