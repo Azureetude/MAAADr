@@ -40,6 +40,16 @@
     //         "./agent/main.py"
     //     ]
     // },
+    "group": [
+        {
+            "name": "daily",
+            "label": "日常任务"
+        },
+        {
+            "name": "standalone",
+            "label": "独立任务"
+        }
+    ],
      "import": [
         "./tasks/opengame.json",
         "./tasks/homepagess.json",

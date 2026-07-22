@@ -8,6 +8,9 @@
             ]
         }
     ],
+    "group": [
+            "daily"
+             ],
      "option": {
         "是否领取邮件": {
             "type": "switch",

@@ -11,6 +11,9 @@
             ]
         }
     ],
+    "group": [
+            "daily"
+             ],
     "option": {
         "关卡": {
             "type": "select",
