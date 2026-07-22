@@ -51,6 +51,7 @@
         }
     ],
      "import": [
+        "./tasks/preset/Daily.json",
         "./tasks/opengame.json",
         "./tasks/homepagess.json",
         "./tasks/getitem.json",
