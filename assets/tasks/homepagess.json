@@ -1,0 +1,74 @@
+{
+    "task": [
+        {
+            "name": "当期活动",
+            "entry": "findmap",
+            "option": [
+                "活动",
+//                "次数",
+                "是否跳过战斗"
+            ]
+        }
+    ],
+     "option": {
+        "是否跳过战斗": {
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "Yes"
+//                    "pipeline_override": {
+//                        "startgame": {
+//                            "next": "checkdaily"  // 控制跳转到返回主界面节点
+//                     }
+//                    }
+                },
+                {
+                    "name": "No",
+//                    "pipeline_override": {
+//                        "startgame": {
+//                            "next": "checkdaily_nomail"  // 控制跳转到返回主界面节点
+//                     }
+//                    }
+                }
+            ]
+        },
+         "活动": {
+            "type": "select",
+            "cases": [
+                {
+                    "name": "监狱迷宫瓦尔拉哈",
+                    "option": [  // 嵌套的子选项
+                       "JV_33"
+                   ],
+                    "pipeline_override": {
+                        "findmap": {
+                            "next": "find_JV"  // 控制跳转到对应活动地图
+                        }
+                    }
+                },
+                {
+                    "name": "哞特儿牧场",
+                    "option": [  // 嵌套的子选项
+                       "MR_37"
+                   ],
+                    "pipeline_override": {
+                        "findmap": {
+                            "next": "find_MR"  // 控制跳转到对应活动地图
+                        }
+                    }
+                }
+            ]
+        },
+        "MR_37": {
+            "type": "select",
+            "cases": [
+            { "name": "MR_37" }
+             ]
+        },
+        "JV_33": {
+            "type": "select",
+            "cases": [
+            { "name": "JV_33" }
+             ]
+        }
+     }

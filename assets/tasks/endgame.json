@@ -1,8 +1,0 @@
-{
-    "task": [
-        {
-            "name": "退出游戏",
-            "entry": "endgame"
-        }
-    ]
-}
