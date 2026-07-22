@@ -57,5 +57,8 @@
         "./tasks/getitem.json",
         "./tasks/mainstory.json",
 //        "./tasks/Closegame.json"
-     ]
+     ],
+     "task": [  
+        // 主文件中的任务  
+    ]
 }
