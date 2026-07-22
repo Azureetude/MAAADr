@@ -11,9 +11,6 @@
             ]
         }
     ],
-    "group": [
-            "daily"
-             ],
      "option": {
         "难度": {
             "type": "select",

@@ -10,9 +10,6 @@
             ]
         }
     ],
-    "group": [
-            "daily"
-             ],
      "option": {
         "是否跳过战斗": {
             "type": "switch",

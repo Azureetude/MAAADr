@@ -40,25 +40,12 @@
     //         "./agent/main.py"
     //     ]
     // },
-    "group": [
-        {
-            "name": "daily",
-            "label": "日常任务"
-        },
-        {
-            "name": "standalone",
-            "label": "独立任务"
-        }
-    ],
      "import": [
-        "./tasks/preset/Daily.json",
-        "./tasks/opengame.json",
-        "./tasks/homepagess.json",
-        "./tasks/getitem.json",
-        "./tasks/mainstory.json",
+//        "./tasks/preset/Daily.json",
+        "tasks/opengame.json",
+        "tasks/homepagess.json",
+        "tasks/getitem.json",
+        "tasks/mainstory.json"
 //        "./tasks/Closegame.json"
-     ],
-     "task": [  
-        // 主文件中的任务  
-    ]
+     ]
 }
