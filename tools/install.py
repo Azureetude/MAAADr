@@ -103,15 +103,23 @@ def install_resource():
 
     configure_ocr_model()
 
-    shutil.copytree(
-        working_dir / "assets" / "resource",
-        install_path / "resource",
-        dirs_exist_ok=True,
-    )
-    shutil.copy2(
-        working_dir / "assets" / "interface.json",
-        install_path,
-    )
+    if (working_dir / "assets" / "resource").exists():
+        shutil.copytree(
+            working_dir / "assets" / "resource",
+            install_path / "resource",
+            dirs_exist_ok=True,
+        )
+    else:
+        shutil.copytree(
+            working_dir / "resource",
+            install_path / "resource",
+            dirs_exist_ok=True,
+        )
+
+    interface_src = working_dir / "assets" / "interface.json"
+    if not interface_src.exists():
+        interface_src = working_dir / "interface.json"
+    shutil.copy2(interface_src, install_path)
 
     with open(install_path / "interface.json", "r", encoding="utf-8") as f:
         interface = jsonc.load(f)
