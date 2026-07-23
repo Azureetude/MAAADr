@@ -146,8 +146,8 @@ jobs:
           path: "install"
 
   build-nsis:
-    if: ${{ !cancelled() }}
-    needs: [meta]
+    if: ${{ !cancelled() && needs.install.result != 'failure' }}
+    needs: [meta, install]
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
