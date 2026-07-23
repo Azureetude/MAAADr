@@ -1,16 +1,34 @@
+<div align="center">
 
 # MaaADr
 
-</div>
+  <p align="center">
+    <a href="https://github.com/Azureetude/MAAADr/issues">报告 Bug</a>
+  </p>
+  <p align="center">
+    <img src="https://img.shields.io/badge/Platform-Windows-0078D7?style=flat-square&logo=Windows" alt="Platform" />
+    <img src="https://img.shields.io/badge/Language-Python%20%2F%20PipeLine-blue?style=flat-square&logo=Python" alt="Language" />
+    <img alt="license" src="https://img.shields.io/github/license/Azureetude/MAAADr?style=flat-square">
+    <br>
+    <a href="https://maafw.com/" target="_blank"><img alt="website" src="https://raw.githubusercontent.com/MaaXYZ/MaaFramework/refs/heads/main/docs/static/maafw.svg"></a>
+    <br/>
+    <img alt="commit" src="https://img.shields.io/github/commit-activity/m/Azureetude/MAAADr?style=flat-square&color=darkgreen">
+    <img src="https://img.shields.io/github/stars/Azureetude/MAAADr?style=flat-square&logo=github&color=darkgreen" alt="Stars" />
+  </p>
 
 基于全新架构的 龙脉R(AnaDos) 自动战斗/护肝小助手。图像技术+模拟控制，解放双手！
+
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
-# 本项目目前处于极早期阶段，可能存在大量页面及功能调整
+</div>
 
-# 如有问题及建议，欢迎在github的issue板块提出
-
-MaaADr交流QQ群：1071729734
+> [!Tip]
+>
+> 本项目目前处于极早期阶段，可能存在大量页面及功能调整
+>
+> 如有问题及建议，欢迎在github的issue板块提出
+>
+> MaaADr交流QQ群：1071729734
 
 ## 功能列表
 
@@ -40,6 +58,6 @@ MaaADr交流QQ群：1071729734
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
-感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
+感谢以下开发者对本项目作出的贡献:
 
 [![Contributors](https://contrib.rocks/image?repo=Azureetude/MAAADr)](https://github.com/Azureetude/MAAADr/graphs/contributors?from=2026%2F4%2F18)
