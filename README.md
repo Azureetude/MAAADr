@@ -40,6 +40,8 @@ MaaADr交流QQ群：1071729734
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
+NSIS 安装包构建参考 [MAK](https://github.com/Hollow-YK/MaaAssistantKedrgame) 。
+
 感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
 
 [![Contributors](https://contrib.rocks/image?repo=Azureetude/MAAADr)](https://github.com/Azureetude/MAAADr/graphs/contributors?from=2026%2F4%2F18)

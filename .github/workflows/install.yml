@@ -16,6 +16,7 @@ on:
     paths:
       - ".github/workflows/install.yml"
       - "assets/**"
+      - "tools/ci/*.nsi"
       - "**.py"
   pull_request:
     branches:
@@ -23,6 +24,7 @@ on:
     paths:
       - ".github/workflows/install.yml"
       - "assets/**"
+      - "tools/ci/*.nsi"
       - "**.py"
   workflow_dispatch:
 
@@ -143,6 +145,57 @@ jobs:
           name: MaaADr-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
+  build-nsis:
+    if: ${{ !cancelled() }}
+    needs: [meta]
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Download Windows x86_64 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: MaaADr-win-x86_64
+          path: install
+
+      - name: Convert PNG to ICO
+        shell: pwsh
+        run: |
+          choco install imagemagick -y
+          magick convert resource/image/basic/logo.png -define icon:auto-resize=256,128,64,48,32,24,16 logo.ico
+
+      - name: Copy ICO to install directory
+        shell: pwsh
+        run: |
+          Copy-Item -Path "logo.ico" -Destination "install/logo.ico"
+
+      - name: Install NSIS
+        shell: pwsh
+        run: |
+          choco install nsis --version=3.12.0 -y
+
+      - name: Build NSIS installer
+        shell: pwsh
+        run: |
+          $tag = "${{ needs.meta.outputs.tag }}"
+          $env:Path = "C:\Program Files (x86)\NSIS;$env:Path"
+          makensis `
+            -DVERSION="$tag" `
+            -DARCH="x64" `
+            -DSOURCE_DIR="${{ github.workspace }}\install" `
+            -DICON_FILE="${{ github.workspace }}\logo.ico" `
+            -DOUTFILE="${{ github.workspace }}\MaaADr-win-x86_64-$tag-Setup.exe" `
+            tools/ci/installer.nsi
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Upload NSIS installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MaaADr-win-x86_64-Setup
+          path: "MaaADr-win-x86_64-${{ needs.meta.outputs.tag }}-Setup.exe"
+
   changelog:
     name: Generate changelog
     needs: meta
@@ -171,7 +224,7 @@ jobs:
 
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [meta, install, changelog]
+    needs: [meta, install, build-nsis, changelog]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
@@ -180,7 +233,17 @@ jobs:
 
       - run: |
           cd assets
+          # 将 NSIS 安装包 .exe 移出目录到 assets 根目录供直接上传
+          for d in *Setup*; do
+            if [ -d "$d" ]; then
+              mv "$d"/*.exe . 2>/dev/null || true
+              rm -rf "$d"
+            fi
+          done
           for f in *; do
+            if [ ! -d "$f" ]; then
+              continue
+            fi
             (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
           done
           
